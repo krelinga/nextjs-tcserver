@@ -10,6 +10,7 @@ const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
   keepCase: true,
   defaults: true,
   oneofs: true,
+  enums: String,
 });
 
 const tcServer = (
