@@ -5,6 +5,8 @@ interface Props {
   numTranscodes: number;
 }
 
+export const dynamic = 'force-dynamic'
+
 export default async function Home() {
   const server = new TcServer()
   const { reply, error } = await server.listAsyncTranscodesP()
