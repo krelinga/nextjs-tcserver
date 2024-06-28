@@ -1,4 +1,3 @@
-'use server';
 import { TcServer } from '@/app/lib/grpc-service';
 
 
