@@ -1,5 +1,5 @@
 import { TcServer } from '@/app/lib/grpc-service';
-
+import Table from '@/app/ui/table';
 
 interface Props {
   numTranscodes: number;
@@ -12,7 +12,7 @@ export default async function Home() {
   console.log("error: ", error)
   return (
     <main>
-      { reply.op.length }
+      <Table reply={reply} />
     </main>
   );
 }
