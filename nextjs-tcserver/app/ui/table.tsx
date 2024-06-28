@@ -1,4 +1,4 @@
-import { ListAsyncTranscodesReply } from '@/proto/generated/pkg/ListAsyncTranscodesReply'
+import { ListAsyncTranscodesReply } from '@/proto/generated/ListAsyncTranscodesReply'
 
 export default function Table({ reply } : { reply?: ListAsyncTranscodesReply; }) {
   return (

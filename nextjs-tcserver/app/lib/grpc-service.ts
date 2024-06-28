@@ -1,7 +1,7 @@
 import { TCServer } from '../lib/grpc-client';
 import { promisify } from 'util';
 import * as grpc from '@grpc/grpc-js';
-import { ListAsyncTranscodesReply } from '@/proto/generated/pkg/ListAsyncTranscodesReply'
+import { ListAsyncTranscodesReply } from '@/proto/generated/ListAsyncTranscodesReply'
 
 const target = '192.168.86.44:25000';
 
