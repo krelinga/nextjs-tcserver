@@ -3,6 +3,8 @@
 
 syntax = "proto3";
 
+package pkg;
+
 option go_package = "github.com/krelinga/video-tool-box/pb";
 
 message StartAsyncTranscodeRequest {

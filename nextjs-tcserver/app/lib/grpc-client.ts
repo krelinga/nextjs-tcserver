@@ -15,6 +15,6 @@ const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
 
 const tcServer = (
   grpc.loadPackageDefinition(packageDefinition) as unknown as ProtoGrpcType
-);
+).pkg;
 
 export const { TCServer } = tcServer;
