@@ -1,6 +1,6 @@
-import { ListAsyncTranscodeReply } from '@/proto/generated/ListAsyncTranscodeReply'
+import { ListAsyncTranscodesReply } from '@/proto/generated/ListAsyncTranscodesReply'
 
-export default function Table({ reply } : { reply: ListAsyncTranscodeReply; }) {
+export default function Table({ reply } : { reply?: ListAsyncTranscodesReply; }) {
   return (
     <table>
       <thead>
@@ -11,7 +11,7 @@ export default function Table({ reply } : { reply: ListAsyncTranscodeReply; }) {
         </tr>
       </thead>
       <tbody>
-        { reply.op.map(op => (
+        { reply?.op?.map(op => (
           <tr key={op.name}>
             <td>{op.name}</td>
             <td>{op.type}</td>

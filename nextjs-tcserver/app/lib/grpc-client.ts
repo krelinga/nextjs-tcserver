@@ -1,6 +1,6 @@
 import * as grpc from '@grpc/grpc-js';
 import * as protoLoader from '@grpc/proto-loader';
-import { ProtoGrpcType } from '@proto/generated/tcserver';
+import { ProtoGrpcType } from '@/proto/generated/tcserver';
 import path from 'path';
 
 const PROTO_PATH = path.join(process.cwd(), './proto/tcserver.proto');
