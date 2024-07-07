@@ -12,6 +12,7 @@
     "@buf/krelinga_proto.bufbuild_es": "1.10.0-20240702190713-728aa1143dc0.1",
     "@buf/krelinga_proto.connectrpc_es": "1.4.0-20240702190713-728aa1143dc0.3",
     "@buf/krelinga_proto.grpc_web": "1.5.0-20240702190713-728aa1143dc0.1",
+    "@bufbuild/protobuf": "^1.10.0",
     "@connectrpc/connect": "^1.4.0",
     "@connectrpc/connect-node": "^1.4.0",
     "@grpc/grpc-js": "^1.10.10",
