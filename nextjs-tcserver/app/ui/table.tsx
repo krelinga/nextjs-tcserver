@@ -1,6 +1,6 @@
-import { ListAsyncTranscodesReply } from '@/proto/generated/ListAsyncTranscodesReply'
+import { ListAsyncTranscodesResponse } from '@buf/krelinga_proto.bufbuild_es/krelinga/video/tcserver/v1/tcserver_pb'
 
-export default function Table({ reply } : { reply?: ListAsyncTranscodesReply; }) {
+export default function Table({ reply } : { reply?: ListAsyncTranscodesResponse; }) {
   return (
     <table>
       <thead>

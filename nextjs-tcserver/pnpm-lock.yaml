@@ -11,9 +11,18 @@ importers:
       '@buf/krelinga_proto.bufbuild_es':
         specifier: 1.10.0-20240702190713-728aa1143dc0.1
         version: 1.10.0-20240702190713-728aa1143dc0.1(@bufbuild/protobuf@1.10.0)
+      '@buf/krelinga_proto.connectrpc_es':
+        specifier: 1.4.0-20240702190713-728aa1143dc0.3
+        version: 1.4.0-20240702190713-728aa1143dc0.3(@bufbuild/protobuf@1.10.0)(@connectrpc/connect@1.4.0(@bufbuild/protobuf@1.10.0))
       '@buf/krelinga_proto.grpc_web':
         specifier: 1.5.0-20240702190713-728aa1143dc0.1
         version: 1.5.0-20240702190713-728aa1143dc0.1(google-protobuf@3.21.2)(grpc-web@1.5.0)
+      '@connectrpc/connect':
+        specifier: ^1.4.0
+        version: 1.4.0(@bufbuild/protobuf@1.10.0)
+      '@connectrpc/connect-node':
+        specifier: ^1.4.0
+        version: 1.4.0(@bufbuild/protobuf@1.10.0)(@connectrpc/connect@1.4.0(@bufbuild/protobuf@1.10.0))
       '@grpc/grpc-js':
         specifier: ^1.10.10
         version: 1.10.10
@@ -69,6 +78,16 @@ packages:
     peerDependencies:
       '@bufbuild/protobuf': ^1.10.0
 
+  '@buf/krelinga_proto.bufbuild_es@1.7.2-20240702190713-728aa1143dc0.2':
+    resolution: {tarball: https://buf.build/gen/npm/v1/@buf/krelinga_proto.bufbuild_es/-/krelinga_proto.bufbuild_es-1.7.2-20240702190713-728aa1143dc0.2.tgz}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.7.2
+
+  '@buf/krelinga_proto.connectrpc_es@1.4.0-20240702190713-728aa1143dc0.3':
+    resolution: {tarball: https://buf.build/gen/npm/v1/@buf/krelinga_proto.connectrpc_es/-/krelinga_proto.connectrpc_es-1.4.0-20240702190713-728aa1143dc0.3.tgz}
+    peerDependencies:
+      '@connectrpc/connect': ^1.4.0
+
   '@buf/krelinga_proto.grpc_web@1.5.0-20240702190713-728aa1143dc0.1':
     resolution: {tarball: https://buf.build/gen/npm/v1/@buf/krelinga_proto.grpc_web/-/krelinga_proto.grpc_web-1.5.0-20240702190713-728aa1143dc0.1.tgz}
     peerDependencies:
@@ -77,6 +96,18 @@ packages:
 
   '@bufbuild/protobuf@1.10.0':
     resolution: {integrity: sha512-QDdVFLoN93Zjg36NoQPZfsVH9tZew7wKDKyV5qRdj8ntT4wQCOradQjRaTdwMhWUYsgKsvCINKKm87FdEk96Ag==}
+
+  '@connectrpc/connect-node@1.4.0':
+    resolution: {integrity: sha512-0ANnrr6SvsjevsWEgdzHy7BaHkluZyS6s4xNoVt7RBHFR5V/kT9lPokoIbYUOU9JHzdRgTaS3x5595mwUsu15g==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.4.2
+      '@connectrpc/connect': 1.4.0
+
+  '@connectrpc/connect@1.4.0':
+    resolution: {integrity: sha512-vZeOkKaAjyV4+RH3+rJZIfDFJAfr+7fyYr6sLDKbYX3uuTVszhFe9/YKf5DNqrDb5cKdKVlYkGn6DTDqMitAnA==}
+    peerDependencies:
+      '@bufbuild/protobuf': ^1.4.2
 
   '@eslint-community/eslint-utils@4.4.0':
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
@@ -95,6 +126,10 @@ packages:
   '@eslint/js@8.57.0':
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  '@fastify/busboy@2.1.1':
+    resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
+    engines: {node: '>=14'}
 
   '@grpc/grpc-js@1.10.10':
     resolution: {integrity: sha512-HPa/K5NX6ahMoeBv15njAc/sfF4/jmiXLar9UlC2UfHFKZzsCVLc3wbe7+7qua7w9VPh2/L6EBxyAV7/E8Wftg==}
@@ -1793,6 +1828,10 @@ packages:
   undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
 
+  undici@5.28.4:
+    resolution: {integrity: sha512-72RFADWFqKmUb2hmmvNODKL3p9hcB6Gt2DOQMis1SEBaV6a4MH8soBvzg+95CYhCKPFedut2JY9bMfrDl9D23g==}
+    engines: {node: '>=14.0'}
+
   update-browserslist-db@1.0.16:
     resolution: {integrity: sha512-KVbTxlBYlckhF5wgfyZXTWnMn7MMZjMu9XG8bPlliUOP9ThaF4QnhP8qrjrH7DRzHfSk0oQv1wToW+iA5GajEQ==}
     hasBin: true
@@ -1887,12 +1926,33 @@ snapshots:
     dependencies:
       '@bufbuild/protobuf': 1.10.0
 
+  '@buf/krelinga_proto.bufbuild_es@1.7.2-20240702190713-728aa1143dc0.2(@bufbuild/protobuf@1.10.0)':
+    dependencies:
+      '@bufbuild/protobuf': 1.10.0
+
+  '@buf/krelinga_proto.connectrpc_es@1.4.0-20240702190713-728aa1143dc0.3(@bufbuild/protobuf@1.10.0)(@connectrpc/connect@1.4.0(@bufbuild/protobuf@1.10.0))':
+    dependencies:
+      '@buf/krelinga_proto.bufbuild_es': 1.7.2-20240702190713-728aa1143dc0.2(@bufbuild/protobuf@1.10.0)
+      '@connectrpc/connect': 1.4.0(@bufbuild/protobuf@1.10.0)
+    transitivePeerDependencies:
+      - '@bufbuild/protobuf'
+
   '@buf/krelinga_proto.grpc_web@1.5.0-20240702190713-728aa1143dc0.1(google-protobuf@3.21.2)(grpc-web@1.5.0)':
     dependencies:
       google-protobuf: 3.21.2
       grpc-web: 1.5.0
 
   '@bufbuild/protobuf@1.10.0': {}
+
+  '@connectrpc/connect-node@1.4.0(@bufbuild/protobuf@1.10.0)(@connectrpc/connect@1.4.0(@bufbuild/protobuf@1.10.0))':
+    dependencies:
+      '@bufbuild/protobuf': 1.10.0
+      '@connectrpc/connect': 1.4.0(@bufbuild/protobuf@1.10.0)
+      undici: 5.28.4
+
+  '@connectrpc/connect@1.4.0(@bufbuild/protobuf@1.10.0)':
+    dependencies:
+      '@bufbuild/protobuf': 1.10.0
 
   '@eslint-community/eslint-utils@4.4.0(eslint@8.57.0)':
     dependencies:
@@ -1916,6 +1976,8 @@ snapshots:
       - supports-color
 
   '@eslint/js@8.57.0': {}
+
+  '@fastify/busboy@2.1.1': {}
 
   '@grpc/grpc-js@1.10.10':
     dependencies:
@@ -3871,6 +3933,10 @@ snapshots:
       which-boxed-primitive: 1.0.2
 
   undici-types@5.26.5: {}
+
+  undici@5.28.4:
+    dependencies:
+      '@fastify/busboy': 2.1.1
 
   update-browserslist-db@1.0.16(browserslist@4.23.1):
     dependencies:

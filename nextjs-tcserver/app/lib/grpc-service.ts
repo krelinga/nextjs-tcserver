@@ -1,26 +1,14 @@
-import { TCServer } from '../lib/grpc-client';
-import { promisify } from 'util';
-import * as grpc from '@grpc/grpc-js';
-import { ListAsyncTranscodesReply } from '@/proto/generated/ListAsyncTranscodesReply'
+import { createPromiseClient } from '@connectrpc/connect';
+import { TCService } from '@buf/krelinga_proto.connectrpc_es/krelinga/video/tcserver/v1/tcserver_connect';
+import { createConnectTransport } from "@connectrpc/connect-node";
 
-const target = '192.168.86.44:25000';
+const target = 'http://192.168.86.35:25000';
 
-export interface TranscodesOrError {
-  reply?: ListAsyncTranscodesReply;
-  error?: Error;
-};
+const transport = createConnectTransport({
+  baseUrl: target,
+  httpVersion: '1.1'
+});
 
-// TODO: I think the entire purpose of this is to wrap the generated RPC methods in a promise-yielding layer.
-export class TcServer extends TCServer {
-  constructor() {
-    super(target, grpc.credentials.createInsecure());
-  }
+const client = createPromiseClient(TCService, transport)
 
-  public async listAsyncTranscodesP(): Promise<TranscodesOrError> {
-    const promiseFn = promisify(this.listAsyncTranscodes).bind(this);
-    // TODO: I have no idea if this is ideomatic at all.
-    return await promiseFn({})
-      .then((reply) => ({ reply }))
-      .catch((error) => ({ error }));
-  }
-}
+export { client }
