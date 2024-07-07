@@ -11,6 +11,9 @@ importers:
       '@buf/krelinga_proto.bufbuild_es':
         specifier: 1.10.0-20240702190713-728aa1143dc0.1
         version: 1.10.0-20240702190713-728aa1143dc0.1(@bufbuild/protobuf@1.10.0)
+      '@buf/krelinga_proto.grpc_web':
+        specifier: 1.5.0-20240702190713-728aa1143dc0.1
+        version: 1.5.0-20240702190713-728aa1143dc0.1(google-protobuf@3.21.2)(grpc-web@1.5.0)
       '@grpc/grpc-js':
         specifier: ^1.10.10
         version: 1.10.10
@@ -65,6 +68,12 @@ packages:
     resolution: {tarball: https://buf.build/gen/npm/v1/@buf/krelinga_proto.bufbuild_es/-/krelinga_proto.bufbuild_es-1.10.0-20240702190713-728aa1143dc0.1.tgz}
     peerDependencies:
       '@bufbuild/protobuf': ^1.10.0
+
+  '@buf/krelinga_proto.grpc_web@1.5.0-20240702190713-728aa1143dc0.1':
+    resolution: {tarball: https://buf.build/gen/npm/v1/@buf/krelinga_proto.grpc_web/-/krelinga_proto.grpc_web-1.5.0-20240702190713-728aa1143dc0.1.tgz}
+    peerDependencies:
+      google-protobuf: ^3.21.2
+      grpc-web: ^1.5.0
 
   '@bufbuild/protobuf@1.10.0':
     resolution: {integrity: sha512-QDdVFLoN93Zjg36NoQPZfsVH9tZew7wKDKyV5qRdj8ntT4wQCOradQjRaTdwMhWUYsgKsvCINKKm87FdEk96Ag==}
@@ -931,6 +940,9 @@ packages:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==}
     engines: {node: '>=10'}
 
+  google-protobuf@3.21.2:
+    resolution: {integrity: sha512-3MSOYFO5U9mPGikIYCzK0SaThypfGgS6bHqrUGXG3DPHCrb+txNqeEcns1W0lkGfk0rCyNXm7xB9rMxnCiZOoA==}
+
   gopd@1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
 
@@ -939,6 +951,9 @@ packages:
 
   graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
+
+  grpc-web@1.5.0:
+    resolution: {integrity: sha512-y1tS3BBIoiVSzKTDF3Hm7E8hV2n7YY7pO0Uo7depfWJqKzWE+SKr0jvHNIJsJJYILQlpYShpi/DRJJMbosgDMQ==}
 
   has-bigints@1.0.2:
     resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==}
@@ -1871,6 +1886,11 @@ snapshots:
   '@buf/krelinga_proto.bufbuild_es@1.10.0-20240702190713-728aa1143dc0.1(@bufbuild/protobuf@1.10.0)':
     dependencies:
       '@bufbuild/protobuf': 1.10.0
+
+  '@buf/krelinga_proto.grpc_web@1.5.0-20240702190713-728aa1143dc0.1(google-protobuf@3.21.2)(grpc-web@1.5.0)':
+    dependencies:
+      google-protobuf: 3.21.2
+      grpc-web: 1.5.0
 
   '@bufbuild/protobuf@1.10.0': {}
 
@@ -2972,6 +2992,8 @@ snapshots:
       merge2: 1.4.1
       slash: 3.0.0
 
+  google-protobuf@3.21.2: {}
+
   gopd@1.0.1:
     dependencies:
       get-intrinsic: 1.2.4
@@ -2979,6 +3001,8 @@ snapshots:
   graceful-fs@4.2.11: {}
 
   graphemer@1.4.0: {}
+
+  grpc-web@1.5.0: {}
 
   has-bigints@1.0.2: {}
 
