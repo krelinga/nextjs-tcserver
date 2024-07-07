@@ -22,9 +22,6 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Generate proto buffers.
-RUN $(corepack enable pnpm && pnpm bin)/proto-loader-gen-types --longs=String --enums=String --defaults --oneofs --grpcLib=@grpc/grpc-js --outDir=proto/generated proto/*.proto
-
 # TODO: delete this before submitting.
 # RUN ls proto/generated && false
 
