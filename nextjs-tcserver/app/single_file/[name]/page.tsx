@@ -21,7 +21,7 @@ export default async function SingleFile({
   const resp = await client.checkAsyncTranscode(req)
   return (
     <div>
-      <h1>{params.name}</h1>
+      <h2 class='text-2xl'>{params.name}</h2>
       <p>State: {enumName(TranscodeState, resp.state)}</p>
     </div>
   );
