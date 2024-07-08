@@ -1,5 +1,12 @@
 import { client } from '@/app/lib/grpc-service';
-import { CheckAsyncTranscodeRequest, CheckAsyncTranscodeResponse } from '@buf/krelinga_proto.bufbuild_es/krelinga/video/tcserver/v1/tcserver_pb'
+import {
+  CheckAsyncTranscodeRequest,
+  CheckAsyncTranscodeResponse,
+  TranscodeState,
+} from '@buf/krelinga_proto.bufbuild_es/krelinga/video/tcserver/v1/tcserver_pb'
+import { enumName } from '@/app/lib/enums'
+
+export const dynamic = 'force-dynamic'
 
 export default async function SingleFile({
   params
@@ -15,7 +22,7 @@ export default async function SingleFile({
   return (
     <div>
       <h1>{params.name}</h1>
-      <p>State: {resp.state}</p>
+      <p>State: {enumName(TranscodeState, resp.state)}</p>
     </div>
   );
 }
